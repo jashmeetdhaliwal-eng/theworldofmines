@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The World of Mines - Mining Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Panel -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo">⛏️</div>
+                <h1 class="company-name">The World of Mines</h1>
+            </div>
+            <ul class="nav-tabs">
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#machinaries" onclick="showSection('machinaries')">Machinaries</a></li>
+                <li><a href="#sites" onclick="showSection('sites')">Sites</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section (static hero) -->
+    <section id="home" class="section active">
+        <div class="hero">
+            <div class="hero-slideshow">
+                <div class="slide fade">
+                    <img src="images/img%201.jpg" alt="Mining Site 1">
+                </div>
+                <div class="slide fade">
+                    <img src="images/img%202.jpg" alt="Mining Site 2">
+                </div>
+                <div class="slide fade">
+                    <img src="images/img%203.jpg" alt="Mining Site 3">
+                </div>
+                <div class="slide fade">
+                    <img src="images/img%204.jpg" alt="Mining Site 4">
+                </div>
+
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+                <div class="dots-container">
+                    <span class="dot" onclick="setCurrentSlide(0)"></span>
+                    <span class="dot" onclick="setCurrentSlide(1)"></span>
+                    <span class="dot" onclick="setCurrentSlide(2)"></span>
+                    <span class="dot" onclick="setCurrentSlide(3)"></span>
+                </div>
+            </div>
+
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">The World of Mines</h1>
+                <p class="hero-tagline">Sustainable mining solutions · Quality minerals · Trusted partner</p>
+                <div class="hero-cta">
+                    <button class="btn" onclick="showSection('contact')">Get In Touch</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-container">
+            <h2>About The World of Mines</h2>
+            
+            <div class="about-content">
+                <h3>Our Company</h3>
+                <p>The World of Mines is a leading mining and mineral extraction company based in Punjab, India. With over two decades of experience in the mining industry, we have established ourselves as pioneers in sustainable and efficient mining operations. Our commitment to excellence and environmental responsibility sets us apart in the industry.</p>
+
+                <h3>Location & Operations</h3>
+                <p>Headquartered in Punjab, we operate multiple mining sites across the region, specializing in the extraction of various minerals including limestone, clay, aggregates, and other valuable mineral resources. Our strategic location in Punjab provides us access to rich mineral deposits and excellent logistics infrastructure.</p>
+
+                <h3>About Mining</h3>
+                <p>Mining is the process of extracting valuable minerals, ores, and stones from the earth. It is a fundamental industry that provides raw materials for construction, manufacturing, energy production, and various other industries. Modern mining involves the use of advanced machinery, skilled workforce, and adherence to strict environmental and safety standards to ensure sustainable extraction of resources.</p>
+
+                <h3>Our Values</h3>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <h4>🌍 Sustainability</h4>
+                        <p>We are committed to environmentally responsible mining practices and restoration of mined lands.</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>🏭 Efficiency</h4>
+                        <p>Our state-of-the-art equipment and skilled workers ensure maximum productivity and minimal waste.</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>👥 Safety</h4>
+                        <p>Worker safety is our top priority with comprehensive safety protocols and regular training programs.</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>📈 Quality</h4>
+                        <p>We maintain the highest standards of quality in our mineral extraction and processing operations.</p>
+                    </div>
+                </div>
+
+                <h3>Our Mission</h3>
+                <p>To provide the highest quality minerals and mining services while maintaining the highest standards of safety, environmental responsibility, and customer satisfaction. We aim to be the most trusted mining partner in Punjab and beyond.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Machinaries Section -->
+    <section id="machinaries" class="section">
+        <div class="section-container">
+            <h2>Mining Machinery & Equipment</h2>
+            
+            <div class="machinery-grid">
+                <div class="machinery-card">
+                    <div class="machinery-image">🏗️</div>
+                    <h3>Excavators</h3>
+                    <p><strong>Purpose:</strong> Used for digging and moving large quantities of rock and soil from the mining site.</p>
+                    <p><strong>Specifications:</strong> Bucket capacity up to 3-4 cubic meters, hydraulic systems, operating weight 25-35 tons.</p>
+                    <p><strong>Usage:</strong> Essential for overburden removal and mineral extraction.</p>
+                </div>
+
+                <div class="machinery-card">
+                    <div class="machinery-image">⛏️</div>
+                    <h3>Drilling Machines</h3>
+                    <p><strong>Purpose:</strong> Used for making boreholes in rocks for blasting operations.</p>
+                    <p><strong>Specifications:</strong> Drilling depth up to 50 meters, rotation speed 200-400 RPM, compressor powered.</p>
+                    <p><strong>Usage:</strong> Critical for fragmentation and creating blast holes in mining operations.</p>
+                </div>
+
+                <div class="machinery-card">
+                    <div class="machinery-image">🚚</div>
+                    <h3>Haul Trucks</h3>
+                    <p><strong>Purpose:</strong> Transport of extracted minerals and overburden from mining areas.</p>
+                    <p><strong>Specifications:</strong> Payload capacity 40-50 tons, diesel engines, all-terrain capabilities.</p>
+                    <p><strong>Usage:</strong> Primary transportation vehicle for moving materials within and from the mine site.</p>
+                </div>
+
+                <div class="machinery-card">
+                    <div class="machinery-image">⚙️</div>
+                    <h3>Crushers</h3>
+                    <p><strong>Purpose:</strong> Break down large rocks into smaller, manageable pieces for processing.</p>
+                    <p><strong>Specifications:</strong> Crushing capacity 200-500 TPH (tons per hour), jaw and cone types available.</p>
+                    <p><strong>Usage:</strong> Essential for primary and secondary crushing of extracted minerals.</p>
+                </div>
+
+                <div class="machinery-card">
+                    <div class="machinery-image">🛠️</div>
+                    <h3>Loaders</h3>
+                    <p><strong>Purpose:</strong> Loading extracted minerals and materials onto trucks for transport.</p>
+                    <p><strong>Specifications:</strong> Bucket capacity 3-5 cubic meters, wheeled or tracked options.</p>
+                    <p><strong>Usage:</strong> Efficient loading and handling of mined materials at the extraction site.</p>
+                </div>
+
+                <div class="machinery-card">
+                    <div class="machinery-image">⧗</div>
+                    <h3>Screening Equipment</h3>
+                    <p><strong>Purpose:</strong> Separate minerals into different size grades and categories.</p>
+                    <p><strong>Specifications:</strong> Vibrating screens with multiple decks, processing capacity 300-400 TPH.</p>
+                    <p><strong>Usage:</strong> Classification of crushed minerals for quality control and market requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sites Section -->
+    <section id="sites" class="section">
+        <div class="section-container">
+            <h2>Our Mining Sites</h2>
+            
+            <div class="sites-grid">
+                <div class="site-card">
+                    <h3>Mohali Mining Complex</h3>
+                    <p><strong>Location:</strong> Mohali, Punjab</p>
+                    <p><strong>Area:</strong> 250 hectares</p>
+                    <p><strong>Primary Minerals:</strong> Limestone, Clay</p>
+                    <p><strong>Annual Production:</strong> 500,000 tons</p>
+                    <p><strong>Operational Status:</strong> Active</p>
+                </div>
+
+                <div class="site-card">
+                    <h3>Ludhiana Quarry</h3>
+                    <p><strong>Location:</strong> Ludhiana, Punjab</p>
+                    <p><strong>Area:</strong> 180 hectares</p>
+                    <p><strong>Primary Minerals:</strong> Aggregates, Sand</p>
+                    <p><strong>Annual Production:</strong> 400,000 tons</p>
+                    <p><strong>Operational Status:</strong> Active</p>
+                </div>
+
+                <div class="site-card">
+                    <h3>Amritsar Extraction Unit</h3>
+                    <p><strong>Location:</strong> Amritsar, Punjab</p>
+                    <p><strong>Area:</strong> 200 hectares</p>
+                    <p><strong>Primary Minerals:</strong> Clay, Shale</p>
+                    <p><strong>Annual Production:</strong> 350,000 tons</p>
+                    <p><strong>Operational Status:</strong> Active</p>
+                </div>
+
+                <div class="site-card">
+                    <h3>Jalandhar Mineral Park</h3>
+                    <p><strong>Location:</strong> Jalandhar, Punjab</p>
+                    <p><strong>Area:</strong> 220 hectares</p>
+                    <p><strong>Primary Minerals:</strong> Limestone, Aggregates</p>
+                    <p><strong>Annual Production:</strong> 450,000 tons</p>
+                    <p><strong>Operational Status:</strong> Active</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client forms removed -->
+
+    <!-- Recruitment forms removed -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-container">
+            <h2>Contact Us</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>📍 Head Office</h3>
+                        <p><strong>The World of Mines</strong></p>
+                        <p>Industrial Area, Phase II</p>
+                        <p>Mohali, Punjab 160055</p>
+                        <p>India</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>📞 Phone Numbers</h3>
+                        <p><strong>Main Office:</strong> +91-172-4100-5000</p>
+                        <p><strong>Operations:</strong> +91-172-4100-5001</p>
+                        <p><strong>Sales:</strong> +91-172-4100-5002</p>
+                        <p><strong>HR Department:</strong> +91-172-4100-5003</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>✉️ Email Addresses</h3>
+                        <p><strong>General:</strong> info@theworldofmines.com</p>
+                        <p><strong>Sales:</strong> sales@theworldofmines.com</p>
+                        <p><strong>Support:</strong> support@theworldofmines.com</p>
+                        <p><strong>Careers:</strong> careers@theworldofmines.com</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>🕐 Business Hours</h3>
+                        <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
+                        <p><strong>Saturday:</strong> 9:00 AM - 2:00 PM</p>
+                        <p><strong>Sunday:</strong> Closed</p>
+                        <p><strong>Holidays:</strong> Federal holidays</p>
+                    </div>
+                </div>
+
+                <div class="quick-contact">
+                    <h3>Quick Contact Form</h3>
+                    <form id="quickContactForm" class="form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone *" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message *" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forms Navigation -->
+    <!-- Forms navigation removed -->
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 The World of Mines. All rights reserved. | Privacy Policy | Terms & Conditions</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
